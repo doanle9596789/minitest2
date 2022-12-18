@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="nhập các phần tử" id="ip">;
+<button onclick="bt()" style="color: crimson">add</button>
+<button onclick="bt2()" style="color: blueviolet">resoult</button>
+<p id="p"></p>
+<script>
+    let i =0;
+    let array=Array();
+    function bt(){
+        array[i]=document.getElementById("ip").value;
+        alert(array[i]+"có chỉ số là" + i);i++;
+
+    }
+    function bt2(){
+        let resoult=0;
+        for (i=0;i<array.length;i++){
+            if (array[i]%5==0){
+                resoult=resoult+parseInt(array[i])
+
+            }
+        }alert("tổng các số chia hết cho 5 trong mảng là " + resoult)
+    }
+</script>
+</body>
+</html>
